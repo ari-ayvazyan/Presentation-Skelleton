@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Presentation Template</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .reveal section img {
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+      .reveal pre code {
+        max-height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <header class="fixed-header">
+        <div class="header-content">
+          <span class="header-brand">BRAND NAME</span>
+          <span class="header-divider">|</span>
+          <span class="header-title">PRESENTATION TITLE</span>
+        </div>
+      </header>
+      <div class="slides">
+        <!-- Slides will be injected here -->
+      </div>
+      <div class="custom-slide-number"></div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

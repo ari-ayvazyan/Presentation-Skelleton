@@ -1,0 +1,246 @@
+/* style.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+:root {
+  --r-main-font: "Inter", sans-serif;
+  --r-heading-font: "Inter", sans-serif;
+  --r-mono-font: "JetBrains Mono", monospace;
+  --r-background-color: #F5E6DA; /* Cream background */
+  --r-main-color: #000000; /* Dark text */
+  --r-heading-color: #000000;
+  --slide-bg: #F5E6DA; 
+  --slide-border: #000000; 
+}
+
+.reveal {
+  font-family: var(--r-main-font);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--r-main-color);
+  background-color: var(--r-background-color);
+}
+
+/* Fixed Header */
+.fixed-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: var(--r-mono-font);
+  font-size: 0.45em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+
+.header-divider {
+  opacity: 0.3;
+}
+
+/* Base slide styling */
+.reveal .slides section {
+  background-color: var(--slide-bg) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+}
+
+/* Default content slide padding - excluded for stacks and hero slides */
+.reveal .slides section:not(:has(section)):not(.hero-slide) {
+  padding: 100px 80px 60px 80px !important; 
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start !important;
+}
+
+/* Hero slide special layout - split view */
+.reveal .slides section.hero-slide {
+  padding: 0 !important;
+  flex-direction: row !important;
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.hero-left {
+  flex: 1;
+  padding: 80px 80px 80px 80px; /* Aligned with header height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hero-right {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: var(--r-heading-font);
+  color: var(--r-heading-color);
+  text-transform: none;
+  margin: 0;
+  margin-bottom: 0.5em;
+  line-height: 1.1;
+}
+
+.reveal h1 {
+  font-size: 3.5em;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.02em;
+}
+
+.reveal h2 {
+  font-weight: 800;
+  font-size: 2.2em;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.8em;
+}
+
+.reveal p {
+  line-height: 1.6;
+  margin: 0;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+  color: #000000;
+}
+
+/* Monospace text for labels/tags */
+.mono-text {
+  font-family: var(--r-mono-font);
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--r-mono-font);
+  font-size: 0.4em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666;
+  margin-bottom: 16px;
+  background-color: #E2E8F0;
+  padding: 4px 10px;
+  border-radius: 2px;
+  width: fit-content; /* Ensure background only wraps text */
+}
+
+/* Components */
+.black-box {
+  border: 1px solid #000;
+  padding: 16px 20px;
+  background-color: transparent;
+  font-size: 0.65em;
+  line-height: 1.5;
+  color: #000;
+}
+
+.black-box-title {
+  font-weight: 800;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.1em;
+  font-family: var(--r-main-font);
+}
+
+.comparison-table {
+  display: flex;
+  border: 1px solid #000;
+  margin-top: 1.5rem;
+  background-color: transparent;
+  color: #000;
+}
+
+.comparison-table > div {
+  flex: 1;
+  padding: 30px 40px;
+  font-size: 0.75em;
+}
+
+.comparison-table > div:first-child {
+  border-right: 1px solid #000;
+}
+
+.comparison-table h4 {
+  font-size: 1.1em;
+  font-weight: 800;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Custom Slide Numbers */
+.custom-slide-number {
+  position: absolute;
+  bottom: 30px;
+  left: 80px;
+  font-family: var(--r-mono-font);
+  font-size: 0.45em;
+  font-weight: 700;
+  color: #000;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Utilities */
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+.gap-10 { gap: 2.5rem; }
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.flex-1 { flex: 1; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-10 { margin-top: 2.5rem; }
+.mt-auto { margin-top: auto; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.italic { font-style: italic; }
+
+.placeholder-img {
+  background-color: #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  font-weight: 600;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  border: 1px solid rgba(0,0,0,0.1);
+}
