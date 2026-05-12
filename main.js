@@ -39,7 +39,7 @@ async function loadSlides() {
     margin: 0,
     minScale: 1,
     maxScale: 1,
-    navigationMode: 'linear', // Supports top-to-bottom flow
+    navigationMode: 'grid', // Supports 2D navigation (left, right, top, bottom)
     plugins: [RevealHighlight, RevealNotes],
   });
 

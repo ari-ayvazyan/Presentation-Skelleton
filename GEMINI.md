@@ -1,5 +1,8 @@
 # Project Instructions
 
+## Skills
+- **image-style-novel**: Automatically applies a consistent modern graphic novel style to all image generation tasks. It triggers when using `nanobanana` image tools.
+
 ## Visual Verification Workflow
 Whenever you make visual changes to the UI (HTML, CSS, layout, etc.), you **MUST** visually verify your changes using the Playwright MCP server.
 

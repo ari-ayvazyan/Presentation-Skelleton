@@ -61,12 +61,23 @@
   text-align: left;
 }
 
-/* Default content slide padding - excluded for stacks and hero slides */
-.reveal .slides section:not(:has(section)):not(.hero-slide) {
+/* Default content slide padding - excluded for stacks, hero slides, and centered slides */
+.reveal .slides section:not(:has(section)):not(.hero-slide):not(.centered-slide):not(.outro-slide) {
   padding: 100px 80px 60px 80px !important; 
   display: flex !important;
   flex-direction: column;
   justify-content: flex-start !important;
+}
+
+/* Centered slide - centered layout (used for module titles, outro, etc.) */
+.reveal .slides section.centered-slide,
+.reveal .slides section.outro-slide {
+  padding: 100px 80px 100px 80px !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 
 /* Hero slide special layout - split view */
@@ -78,20 +89,50 @@
 }
 
 .hero-left {
-  flex: 1;
+  width: 70% !important;
+  flex: none !important;
   padding: 80px 80px 80px 80px; /* Aligned with header height */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .hero-right {
-  flex: 1;
+  width: 30% !important;
+  flex: none !important;
   background-size: cover;
   background-position: center;
   height: 100%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Hero tags */
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--r-mono-font);
+  font-size: 0.65em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 16px 28px;
+  border-radius: 0;
+  white-space: nowrap;
+}
+
+.tag-filled {
+  background-color: #E2E8F0;
+  color: #000;
+}
+
+.tag-outlined {
+  border: 1px solid #000;
+  color: #000;
 }
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
@@ -151,28 +192,33 @@
 
 /* Components */
 .black-box {
-  border: 1px solid #000;
-  padding: 16px 20px;
+  border: 4px solid #000;
+  padding: 20px 24px;
   background-color: transparent;
   font-size: 0.65em;
   line-height: 1.5;
   color: #000;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0px 0px #000;
 }
 
 .black-box-title {
   font-weight: 800;
   display: block;
-  margin-bottom: 6px;
-  font-size: 1.1em;
+  margin-bottom: 8px;
+  font-size: 1.2em;
   font-family: var(--r-main-font);
 }
 
 .comparison-table {
   display: flex;
-  border: 1px solid #000;
+  border: 4px solid #000;
   margin-top: 1.5rem;
   background-color: transparent;
   color: #000;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0px 0px #000;
+  overflow: hidden;
 }
 
 .comparison-table > div {
@@ -182,7 +228,7 @@
 }
 
 .comparison-table > div:first-child {
-  border-right: 1px solid #000;
+  border-right: 4px solid #000;
 }
 
 .comparison-table h4 {
