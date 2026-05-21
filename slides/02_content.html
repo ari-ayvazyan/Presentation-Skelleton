@@ -1,8 +1,7 @@
 <!-- Module 02: Vertical Slide Stack -->
-<section>
+<section style="--module-title: 'MODULE 02';">
   <!-- Slide 2.1: Module Title Slide -->
   <section class="centered-slide text-center">
-    <div class="category-badge">MODULE 02</div>
     <h1>Module 02: Core Features</h1>
     <p class="mt-8 font-semibold" style="font-size: 1.2em;">
       A comprehensive overview of the primary functionalities and layouts within this module.
@@ -11,7 +10,7 @@
 
   <!-- Slide 2.2: Feature Overview Grid -->
   <section>
-    <div class="category-badge">MODULE 02</div>
+    <div class="category-badge"></div>
     <h2>Feature Overview Grid</h2>
     <p class="w-full" style="max-width: 85%; margin-bottom: 2.5rem;">
       This slide is perfect for highlighting key benefits or features in a clear, structured 3-column grid layout. Each column can have its own icon and description.
@@ -59,10 +58,32 @@
     </div>
   </section>
 
-  <!-- Slide 2.3: Split Feature List (Moved from Module 05) -->
+  <!-- Slide 2.3: Two-Column Card Layout -->
+  <section>
+    <div class="category-badge"></div>
+    <h2>Two-Column Card Layout</h2>
+    <p class="mb-12">Highlight two complementary concepts side-by-side.</p>
+
+    <div class="grid-2 mt-8">
+      <div class="flex-col p-6 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <h4 class="font-extrabold italic mb-4">Card Title One</h4>
+        <div class="text-sm mb-6">
+          Short description text for the first card. Use this layout to compare or pair two related items.
+        </div>
+      </div>
+      <div class="flex-col p-6 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <h4 class="font-extrabold italic mb-4">Card Title Two</h4>
+        <div class="text-sm mb-6">
+          Short description text for the second card. Each card stands on its own but shares visual weight with its sibling.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 2.4: Split Feature List -->
   <section class="hero-slide">
-    <div class="hero-left" style="flex: 1.2;">
-      <div class="category-badge">MODULE 02</div>
+    <div class="hero-left" style="width: 100% !important;">
+      <div class="category-badge"></div>
       <h2>Vertical Feature List Title</h2>
       <div class="flex-col gap-4 mt-6">
         <div class="black-box">
@@ -91,17 +112,11 @@
         </div>
       </div>
     </div>
-    <div class="hero-right placeholder-img" style="flex: 0.8; background-color: #FDE68A; color: #92400E;">
-      <div class="flex-col items-center p-12 text-center">
-        <span class="font-bold" style="font-size: 1.5em;">FULL BLEED IMAGE PLACEHOLDER</span>
-        <span class="text-xs mt-2 italic">Contextual illustration or photo area</span>
-      </div>
-    </div>
   </section>
 
-  <!-- Slide 2.4 (Former Module 04: Visual Context Layout Title) -->
+  <!-- Slide 2.5: Visual Context Layout -->
   <section>
-    <div class="category-badge">MODULE 04</div>
+    <div class="category-badge"></div>
     <h2>Visual Context Layout Title</h2>
 
     <div class="flex gap-12 mt-6">
@@ -109,12 +124,12 @@
       <div class="flex-col" style="width: 35%;">
         <h4 class="font-extrabold italic mb-4" style="font-size: 1.1em;">Section Subheading?</h4>
         <p class="text-xs" style="line-height: 1.8; opacity: 0.8; font-size: 0.75em;">
-          This sidebar allows for detailed explanation of the visual on the right. 
-          It is perfect for defining terms, providing context, or summarizing the core message of the slide. 
+          This sidebar allows for detailed explanation of the visual on the right.
+          It is perfect for defining terms, providing context, or summarizing the core message of the slide.
           Keep the text concise for better readability.
         </p>
       </div>
-      
+
       <!-- Image -->
       <div class="flex-1">
         <div class="placeholder-img w-full" style="height: 380px; background-color: #1E293B; color: white;">
@@ -134,7 +149,7 @@
         </svg>
         <div><span class="font-extrabold">Detail Item One</span> - Descriptive text explaining the first key takeaway or component.</div>
       </div>
-      
+
       <div class="flex gap-4 items-start" style="font-size: 0.7em; flex: 1;">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" style="margin-top: 2px; flex-shrink: 0;">
           <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -151,11 +166,11 @@
     </div>
   </section>
 
-  <!-- Slide 2.5 (Former Module 04: Comparison Table Layout) -->
+  <!-- Slide 2.6: Comparison Table Layout -->
   <section>
-    <div class="category-badge">MODULE 04</div>
+    <div class="category-badge"></div>
     <h2>Comparison Table Layout</h2>
-    
+
     <p class="text-sm mb-6" style="opacity: 0.8;">
       Compare two entities, roles, or concepts using this side-by-side comparison table. It clearly delineates responsibilities or features.
     </p>
@@ -167,12 +182,12 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="4"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path></svg>
           ENTITY A NAME
         </h4>
-        <ul class="list-none p-0">
-          <li class="flex gap-2 mb-3"><span class="font-bold">·</span> Point one of comparison for Entity A</li>
-          <li class="flex gap-2 mb-3"><span class="font-bold">·</span> Point two of comparison for Entity A</li>
-          <li class="flex gap-2 mb-3"><span class="font-bold">·</span> Point three of comparison for Entity A</li>
-          <li class="flex gap-2 mb-3"><span class="font-bold">·</span> Point four of comparison for Entity A</li>
-          <li class="flex gap-2"><span class="font-bold">·</span> Point five of comparison for Entity A</li>
+        <ul class="list-none p-0 text-xs">
+          <li class="mb-3">Point one of comparison for Entity A</li>
+          <li class="mb-3">Point two of comparison for Entity A</li>
+          <li class="mb-3">Point three of comparison for Entity A</li>
+          <li class="mb-3">Point four of comparison for Entity A</li>
+          <li>Point five of comparison for Entity A</li>
         </ul>
       </div>
       <!-- Column B -->
@@ -181,12 +196,12 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="4"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path></svg>
           ENTITY B NAME
         </h4>
-        <ul class="list-none p-0">
-          <li class="flex gap-2 mb-3"><span class="font-bold">·</span> Point one of comparison for Entity B</li>
-          <li class="flex gap-2 mb-3"><span class="font-bold">·</span> Point two of comparison for Entity B</li>
-          <li class="flex gap-2 mb-3"><span class="font-bold">·</span> Point three of comparison for Entity B</li>
-          <li class="flex gap-2 mb-3"><span class="font-bold">·</span> Point four of comparison for Entity B</li>
-          <li class="flex gap-2"><span class="font-bold">·</span> Point five of comparison for Entity B</li>
+        <ul class="list-none p-0 text-xs">
+          <li class="mb-3">Point one of comparison for Entity B</li>
+          <li class="mb-3">Point two of comparison for Entity B</li>
+          <li class="mb-3">Point three of comparison for Entity B</li>
+          <li class="mb-3">Point four of comparison for Entity B</li>
+          <li>Point five of comparison for Entity B</li>
         </ul>
       </div>
     </div>

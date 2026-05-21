@@ -14,8 +14,9 @@ A professional, modern presentation template built with [reveal.js](https://reve
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18 or higher)
+- [Node.js](https://nodejs.org/) (v20 or higher)
 - npm (comes with Node.js)
+- For image generation and usae of the image skill, install and setup the gemini nanobanana extension: https://github.com/gemini-cli-extensions/nanobanana
 
 ### Installation
 
@@ -40,26 +41,64 @@ Build for production:
 npm run build
 ```
 
+### Presentation
+
+- Use npm run presentation rather than npm run dev on the day — no HMR overhead, no dev warnings, behaves like the deployed version.
+- Press F for fullscreen, S for speaker notes (opens a second window — handy with a projector/extended display).
+- Have npm run export-pdf output (presentation.pdf) on hand as a backup in case the browser misbehaves.
+
+```bash
+npm run presentation
+```
+
 ## Slide Previews
 
 ### Slide 1: Hero Slide
-![Hero Slide](assets/slide_1_hero.png)
+![Hero Slide](assets/slide_1.webp)
 
-### Slide 2: Content Module Overview
+### Module 02: Core Features
 #### 2.1: Module Title
-![Module Title](assets/slide_2_1_title.png)
+![Module Title](assets/slide_1_0.webp)
 
 #### 2.2: Feature Overview Grid
-![Feature Grid](assets/slide_2_2_grid.png)
+![Feature Overview Grid](assets/slide_1_1.webp)
 
-#### 2.3: Split Feature List
-![Feature List](assets/slide_2_3_list.png)
+#### 2.3: Two-Column Card Layout
+![Two-Column Card Layout](assets/slide_1_2.webp)
 
-#### 2.5: Comparison Table Layout
-![Comparison Table](assets/slide_2_5_table.png)
+#### 2.4: Vertical Feature List
+![Vertical Feature List](assets/slide_1_3.webp)
 
-### Slide 3: Conclusion Slide
-![Conclusion Slide](assets/slide_3_outro.png)
+#### 2.5: Visual Context Layout
+![Visual Context Layout](assets/slide_1_4.webp)
+
+#### 2.6: Comparison Table Layout
+![Comparison Table Layout](assets/slide_1_5.webp)
+
+### Module 03: Additional Layout Patterns
+#### 3.1: Module Title With Links
+![Module Title With Links](assets/slide_2_0.webp)
+
+#### 3.2: Four-Quadrant Overview
+![Four-Quadrant Overview](assets/slide_2_1.webp)
+
+#### 3.3: Five-Item Grid With Wide Row
+![Five-Item Grid With Wide Row](assets/slide_2_2.webp)
+
+#### 3.4: Cards With Embedded Lists
+![Cards With Embedded Lists](assets/slide_2_3.webp)
+
+#### 3.5: Numbered Process Steps
+![Numbered Process Steps](assets/slide_2_4.webp)
+
+#### 3.6: Four-Column Comparison
+![Four-Column Comparison](assets/slide_2_5.webp)
+
+### Slide 3: Additional Patterns (Extras)
+![Extras Slide](assets/slide_3.webp)
+
+### Slide 4: Conclusion Slide
+![Conclusion Slide](assets/slide_4.webp)
 
 ## License
 

@@ -1,0 +1,286 @@
+<!-- Module 03: Additional Layout Patterns -->
+<section style="--module-title: 'MODULE 03';">
+  <!-- Slide 3.1: Title slide with reference link bar -->
+  <section class="centered-slide text-center">
+    <h1>Module Title With Links</h1>
+    <p class="mt-8 font-semibold" style="font-size: 1.2em;">
+      Use this layout when the title slide should also surface external references.
+    </p>
+    <div class="flex gap-4 mt-8" style="font-size: 0.7em;">
+      <a href="#" class="font-bold underline">Reference One &rarr;</a>
+      <span style="opacity: 0.4;">|</span>
+      <a href="#" class="font-bold underline">Reference Two &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Slide 3.2: 2x2 black-box grid for risk tiers / category overviews -->
+  <section>
+    <div class="category-badge"></div>
+    <h2>Four-Quadrant Overview</h2>
+
+    <div class="grid-2 mt-4" style="gap: 1.25rem;">
+      <div class="black-box">
+        <h4 class="font-extrabold italic mb-2" style="font-size: 1.2em;">1. Quadrant One</h4>
+        <p class="text-xs mb-0" style="font-size: 0.8em; opacity: 0.8;">
+          Short description of the first category. Use this slide for risk tiers, maturity levels, or any four-way breakdown.
+        </p>
+      </div>
+      <div class="black-box">
+        <h4 class="font-extrabold italic mb-2" style="font-size: 1.2em;">2. Quadrant Two</h4>
+        <p class="text-xs mb-0" style="font-size: 0.8em; opacity: 0.8;">
+          Short description of the second category.
+        </p>
+      </div>
+      <div class="black-box">
+        <h4 class="font-extrabold italic mb-2" style="font-size: 1.2em;">3. Quadrant Three</h4>
+        <p class="text-xs mb-0" style="font-size: 0.8em; opacity: 0.8;">
+          Short description of the third category.
+        </p>
+      </div>
+      <div class="black-box">
+        <h4 class="font-extrabold italic mb-2" style="font-size: 1.2em;">4. Quadrant Four</h4>
+        <p class="text-xs mb-0" style="font-size: 0.8em; opacity: 0.8;">
+          Short description of the fourth category.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 3.3: 5-item grid with span-2 footer row -->
+  <section class="hero-slide">
+    <div class="hero-left" style="width: 100% !important;">
+      <div class="category-badge"></div>
+      <h2>Five-Item Grid With Wide Row</h2>
+      <div class="grid-2 mt-6" style="gap: 1.25rem; width: 100%;">
+        <div class="black-box">
+          <h4 class="font-extrabold italic mb-1" style="font-size: 1.1em;">Item One</h4>
+          <p class="text-xs mb-0" style="font-size: 0.8em; opacity: 0.8;">
+            Brief description of the first item.
+          </p>
+        </div>
+        <div class="black-box">
+          <h4 class="font-extrabold italic mb-1" style="font-size: 1.1em;">Item Two</h4>
+          <p class="text-xs mb-0" style="font-size: 0.8em; opacity: 0.8;">
+            Brief description of the second item.
+          </p>
+        </div>
+        <div class="black-box">
+          <h4 class="font-extrabold italic mb-1" style="font-size: 1.1em;">Item Three</h4>
+          <p class="text-xs mb-0" style="font-size: 0.8em; opacity: 0.8;">
+            Brief description of the third item.
+          </p>
+        </div>
+        <div class="black-box">
+          <h4 class="font-extrabold italic mb-1" style="font-size: 1.1em;">Item Four</h4>
+          <p class="text-xs mb-0" style="font-size: 0.8em; opacity: 0.8;">
+            Brief description of the fourth item.
+          </p>
+        </div>
+        <div class="black-box" style="grid-column: span 2;">
+          <h4 class="font-extrabold italic mb-1" style="font-size: 1.1em;">Wide Summary Row</h4>
+          <p class="text-xs mb-0" style="font-size: 0.8em; opacity: 0.8;">
+            Use a span-2 row to call out a summary, exception, or concluding point.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 3.4: Cards with embedded list (3-column) -->
+  <section>
+    <div class="category-badge"></div>
+    <h2>Cards With Embedded Lists</h2>
+    <p class="mb-12">Each card groups several related items under a single heading.</p>
+
+    <div class="grid-3 mt-8 gap-8">
+      <div class="flex-col p-6 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <div class="mb-4">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+        </div>
+        <h4 class="font-extrabold italic mb-4">Category One</h4>
+        <ul class="list-none p-0 text-xs space-y-2">
+          <li>List item one</li>
+          <li>List item two</li>
+          <li>List item three</li>
+        </ul>
+      </div>
+
+      <div class="flex-col p-6 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <div class="mb-4">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+        </div>
+        <h4 class="font-extrabold italic mb-4">Category Two</h4>
+        <ul class="list-none p-0 text-xs space-y-2">
+          <li>List item one</li>
+          <li>List item two</li>
+          <li>List item three</li>
+        </ul>
+      </div>
+
+      <div class="flex-col p-6 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <div class="mb-4">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+        </div>
+        <h4 class="font-extrabold italic mb-4">Category Three</h4>
+        <ul class="list-none p-0 text-xs space-y-2">
+          <li>List item one</li>
+          <li>List item two</li>
+          <li>List item three</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 3.5: Numbered process steps -->
+  <section>
+    <div class="category-badge"></div>
+    <h2>Numbered Process Steps</h2>
+    <p class="mb-12">Walk through a workflow as a series of numbered stages.</p>
+
+    <div class="grid-2 mt-8 gap-8">
+      <div class="flex-col p-6 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <h4 class="font-extrabold italic mb-4">Workflow Title</h4>
+        <div class="text-xs space-y-3 font-semibold text-left">
+          <div class="flex items-center gap-2">
+            <span class="bg-black text-white px-2 py-1 rounded-sm">1</span> First step in the process
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-black text-white px-2 py-1 rounded-sm">2</span> Second step in the process
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-black text-white px-2 py-1 rounded-sm">3</span> Third step in the process
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-black text-white px-2 py-1 rounded-sm">4</span> Fourth step in the process
+          </div>
+        </div>
+      </div>
+      <div class="flex-col p-6 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <h4 class="font-extrabold italic mb-4">Companion Notes</h4>
+        <p class="text-xs" style="line-height: 1.6; opacity: 0.85;">
+          Describe inputs, prerequisites, or context that supports the numbered workflow on the left.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 3.6: 4-column override on grid-2 -->
+  <section>
+    <div class="category-badge"></div>
+    <h2>Four-Column Comparison</h2>
+
+    <div class="grid-2 mt-8" style="gap: 1.25rem; grid-template-columns: repeat(4, 1fr);">
+      <div class="black-box">
+        <h4 class="font-extrabold italic mb-2" style="font-size: 1em;">Option A</h4>
+        <p class="text-xs mb-0" style="font-size: 0.68em; opacity: 0.85; line-height: 1.5;">
+          Short summary line.<br>
+          <strong>Pro:</strong> Main advantage of this option.<br>
+          <strong>Contra:</strong> Main drawback to call out.
+        </p>
+      </div>
+      <div class="black-box">
+        <h4 class="font-extrabold italic mb-2" style="font-size: 1em;">Option B</h4>
+        <p class="text-xs mb-0" style="font-size: 0.68em; opacity: 0.85; line-height: 1.5;">
+          Short summary line.<br>
+          <strong>Pro:</strong> Main advantage of this option.<br>
+          <strong>Contra:</strong> Main drawback to call out.
+        </p>
+      </div>
+      <div class="black-box">
+        <h4 class="font-extrabold italic mb-2" style="font-size: 1em;">Option C</h4>
+        <p class="text-xs mb-0" style="font-size: 0.68em; opacity: 0.85; line-height: 1.5;">
+          Short summary line.<br>
+          <strong>Pro:</strong> Main advantage of this option.<br>
+          <strong>Contra:</strong> Main drawback to call out.
+        </p>
+      </div>
+      <div class="black-box">
+        <h4 class="font-extrabold italic mb-2" style="font-size: 1em;">Option D</h4>
+        <p class="text-xs mb-0" style="font-size: 0.68em; opacity: 0.85; line-height: 1.5;">
+          Short summary line.<br>
+          <strong>Pro:</strong> Main advantage of this option.<br>
+          <strong>Contra:</strong> Main drawback to call out.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 3.7: Standalone steps row (arrow icon + label) -->
+  <section>
+    <div class="category-badge"></div>
+    <h2>Hands-On Steps</h2>
+
+    <div class="flex gap-12 mt-6">
+      <div class="flex-col" style="width: 100%;">
+        <p class="text-xs" style="line-height: 1.8; opacity: 0.8; font-size: 1em;">
+          Use this layout for exercise briefings: a short prompt at the top and individual tasks aligned in a row.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex justify-between mt-12 gap-10">
+      <div class="flex gap-4 items-start" style="font-size: 0.7em; flex: 1;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" style="margin-top: 2px; flex-shrink: 0;">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+        <div><span class="font-extrabold">Task 1</span><br>Description of the first task.</div>
+      </div>
+
+      <div class="flex gap-4 items-start" style="font-size: 0.7em; flex: 1;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" style="margin-top: 2px; flex-shrink: 0;">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+        <div><span class="font-extrabold">Task 2</span><br>Description of the second task.</div>
+      </div>
+
+      <div class="flex gap-4 items-start" style="font-size: 0.7em; flex: 1;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" style="margin-top: 2px; flex-shrink: 0;">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+        <div><span class="font-extrabold">Task 3</span><br>Description of the third task.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 3.8: Centered slide with prominent link CTA -->
+  <section class="centered-slide text-center">
+    <div class="category-badge"></div>
+    <h2>Prominent Call To Action</h2>
+    <p class="mt-6 font-semibold" style="font-size: 1.1em;">
+      Use this layout to spotlight a single link, resource, or next step.
+    </p>
+    <div class="mt-12">
+      <a href="#" class="font-extrabold underline" style="font-size: 1.2em;">
+        example.com/resource &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- Slide 3.9: Background-image slide with content cards on top -->
+  <section data-background-image="/assets/slide_bg.webp" data-background-size="cover">
+    <div class="category-badge"></div>
+    <h2>Slide With Background Image</h2>
+    <p class="mb-12">Cards float on top of a full-bleed image set via <code>data-background-image</code>.</p>
+
+    <div class="grid-3 mt-8 gap-8">
+      <div class="flex-col p-6 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <h4 class="font-extrabold italic mb-4">Card One</h4>
+        <p class="text-xs" style="opacity: 0.85;">
+          Short text. Keep cards opaque so they remain readable above any background.
+        </p>
+      </div>
+      <div class="flex-col p-6 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <h4 class="font-extrabold italic mb-4">Card Two</h4>
+        <p class="text-xs" style="opacity: 0.85;">
+          Short text.
+        </p>
+      </div>
+      <div class="flex-col p-6 border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <h4 class="font-extrabold italic mb-4">Card Three</h4>
+        <p class="text-xs" style="opacity: 0.85;">
+          Short text.
+        </p>
+      </div>
+    </div>
+  </section>
+</section>

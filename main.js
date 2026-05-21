@@ -11,6 +11,7 @@ import RevealNotes from 'reveal.js/plugin/notes/notes.esm.js';
 const slideFiles = [
   "slides/01_hero.html",
   "slides/02_content.html",
+  "slides/04_extras.html",
   "slides/03_outro.html",
 ];
 
@@ -34,14 +35,16 @@ async function loadSlides() {
     hash: true,
     slideNumber: false,
     center: false,
-    width: '100%',
-    height: '100%',
+    width: 1200,
+    height: 800,
     margin: 0,
-    minScale: 1,
-    maxScale: 1,
-    navigationMode: 'grid', // Supports 2D navigation (left, right, top, bottom)
+    minScale: 0.2,
+    maxScale: 2.0,
+    navigationMode: 'default',
     plugins: [RevealHighlight, RevealNotes],
   });
+
+  window.Reveal = Reveal;
 
   const updateSlideNumber = () => {
     const indices = Reveal.getIndices();

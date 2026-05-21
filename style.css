@@ -40,7 +40,7 @@
   align-items: center;
   gap: 15px;
   font-family: var(--r-mono-font);
-  font-size: 0.45em;
+  font-size: 0.675em;
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #000;
@@ -52,7 +52,7 @@
 
 /* Base slide styling */
 .reveal .slides section {
-  background-color: var(--slide-bg) !important;
+  background-color: transparent !important;
   border: none !important;
   border-radius: 0 !important;
   box-sizing: border-box;
@@ -70,8 +70,9 @@
 }
 
 /* Centered slide - centered layout (used for module titles, outro, etc.) */
-.reveal .slides section.centered-slide,
-.reveal .slides section.outro-slide {
+/* Class is duplicated to outscore reveal.js's html.reveal-print .reveal .slides section rule in ?print-pdf mode. */
+.reveal .slides section.centered-slide.centered-slide,
+.reveal .slides section.outro-slide.outro-slide {
   padding: 100px 80px 100px 80px !important;
   display: flex !important;
   flex-direction: column;
@@ -81,7 +82,8 @@
 }
 
 /* Hero slide special layout - split view */
-.reveal .slides section.hero-slide {
+/* Class is duplicated to outscore reveal.js's html.reveal-print .reveal .slides section rule in ?print-pdf mode. */
+.reveal .slides section.hero-slide.hero-slide {
   padding: 0 !important;
   flex-direction: row !important;
   display: flex !important;
@@ -190,6 +192,10 @@
   width: fit-content; /* Ensure background only wraps text */
 }
 
+.category-badge::before {
+  content: var(--module-title, "MODULE");
+}
+
 /* Components */
 .black-box {
   border: 4px solid #000;
@@ -246,7 +252,7 @@
   bottom: 30px;
   left: 80px;
   font-family: var(--r-mono-font);
-  font-size: 0.45em;
+  font-size: 0.9em;
   font-weight: 700;
   color: #000;
   z-index: 1000;
@@ -268,6 +274,7 @@
 .items-start { align-items: flex-start; }
 .justify-between { justify-content: space-between; }
 .justify-center { justify-content: center; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
 .mt-2 { margin-top: 0.5rem; }
 .mt-4 { margin-top: 1rem; }
@@ -289,4 +296,41 @@
   font-size: 0.8em;
   text-transform: uppercase;
   border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* In ?print-pdf mode (both on-screen preview and actual PDF render) reveal.js
+   sets html.reveal-print and wraps each slide in its own .pdf-page. Hide the
+   single in-DOM .fixed-header and render the header per-page via ::before. */
+html.reveal-print .reveal > .fixed-header,
+html.reveal-print .reveal > .custom-slide-number {
+  display: none !important;
+}
+
+/* In ?print-pdf mode reveal.js moves the inner sections of each .stack into
+   their own .pdf-page wrappers but leaves the now-empty .stack <section> in
+   the DOM. Without :has(section) those emptied stacks match the default
+   content rule and inflate to 160px each, pushing the first .pdf-page down.
+   Class is duplicated to outscore the default content rule's :not() chain. */
+html.reveal-print .reveal .slides > section.stack.stack {
+  display: none !important;
+}
+
+html.reveal-print .pdf-page::before {
+  content: "BRAND NAME  |  PRESENTATION TITLE";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  box-sizing: border-box;
+  font-family: var(--r-mono-font);
+  font-size: 0.675em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #000;
+  z-index: 1000;
+  pointer-events: none;
 }
