@@ -3,36 +3,30 @@
   <div class="category-badge"></div>
   <h2>Visual Context Layout Title</h2>
 
-  <div class="flex gap-10 mt-6 items-stretch">
+  <div class="flex gap-8 mt-6 items-stretch" style="flex: 1 1 auto; min-height: 0;">
     <!-- Context column -->
     <div class="flex-col" style="width: 40%;">
       <h4 class="font-extrabold italic mb-3">Section Subheading?</h4>
-      <p class="text-body-sm mb-8" style="line-height: 1.6; opacity: 0.8;">
+      <p class="text-body-sm" style="line-height: 1.6; opacity: 0.8; margin-bottom: 28px;">
         A concise framing of the visual on the right — define the term, set the context, or state the core message.
       </p>
 
-      <div class="flex-col gap-4" style="padding-top: 32px;">
+      <div class="flex-col gap-4" style="border-top: 3px solid #000; padding-top: 28px;">
         <!-- Detail 1 -->
-        <div class="flex gap-3 items-start">
-          <div
-            class="flex items-center justify-center w-7 h-7 rounded-full border border-black bg-black text-white text-xs font-bold flex-shrink-0">
-            1</div>
+        <div class="flex gap-4 items-start">
+          <div class="ctx-step">1</div>
           <p class="text-body-sm mb-0 leading-snug"><span class="font-extrabold">Detail Item One</span> — first key
             takeaway.</p>
         </div>
         <!-- Detail 2 -->
-        <div class="flex gap-3 items-start">
-          <div
-            class="flex items-center justify-center w-7 h-7 rounded-full border border-black bg-black text-white text-xs font-bold flex-shrink-0">
-            2</div>
+        <div class="flex gap-4 items-start">
+          <div class="ctx-step">2</div>
           <p class="text-body-sm mb-0 leading-snug"><span class="font-extrabold">Detail Item Two</span> — second key
             takeaway.</p>
         </div>
         <!-- Detail 3 -->
-        <div class="flex gap-3 items-start">
-          <div
-            class="flex items-center justify-center w-7 h-7 rounded-full border border-black bg-black text-white text-xs font-bold flex-shrink-0">
-            3</div>
+        <div class="flex gap-4 items-start">
+          <div class="ctx-step">3</div>
           <p class="text-body-sm mb-0 leading-snug"><span class="font-extrabold">Detail Item Three</span> — third key
             takeaway.</p>
         </div>
@@ -42,11 +36,9 @@
     <!-- Visual column -->
     <div class="flex-1">
       <neo-card header="Visual" header-bg="var(--step-bg-1)" style="height: 100%;">
-        <div class="placeholder-img w-full h-full" style="min-height: 320px; border-radius: 4px;">
-          <div class="flex-col items-center">
-            <span class="font-bold">LARGE VISUAL PLACEHOLDER</span>
-            <span class="text-caption opacity-60">Workflow, illustration, or data visualization</span>
-          </div>
+        <div style="position: relative; flex: 1 1 auto; min-height: 0; overflow: hidden; margin: -20px; border-top: 3px solid #000;">
+          <img src="assets/hero_art_4x3.webp" alt="Presenter addressing an audience"
+            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;" />
         </div>
       </neo-card>
     </div>

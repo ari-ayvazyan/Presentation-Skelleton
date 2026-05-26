@@ -4,35 +4,65 @@
   <h2>Comparison Table Layout</h2>
 
   <p class="text-body-sm mb-6" style="opacity: 0.8;">
-    Compare two entities, roles, or concepts using this side-by-side comparison table. It clearly delineates responsibilities or features.
+    Compare two entities, roles, or concepts side by side. Each card surfaces the strengths and trade-offs so the audience can weigh them at a glance.
   </p>
 
-  <div class="comparison-table mt-12">
-    <!-- Column A -->
-    <div>
-      <h4 class="text-section-title">
-        ENTITY A NAME
-      </h4>
-      <ul class="list-none p-0 text-body-sm">
-        <li class="mb-3">Point one of comparison for Entity A</li>
-        <li class="mb-3">Point two of comparison for Entity A</li>
-        <li class="mb-3">Point three of comparison for Entity A</li>
-        <li class="mb-3">Point four of comparison for Entity A</li>
-        <li>Point five of comparison for Entity A</li>
-      </ul>
-    </div>
-    <!-- Column B -->
-    <div>
-      <h4 class="text-section-title">
-        ENTITY B NAME
-      </h4>
-      <ul class="list-none p-0 text-body-sm">
-        <li class="mb-3">Point one of comparison for Entity B</li>
-        <li class="mb-3">Point two of comparison for Entity B</li>
-        <li class="mb-3">Point three of comparison for Entity B</li>
-        <li class="mb-3">Point four of comparison for Entity B</li>
-        <li>Point five of comparison for Entity B</li>
-      </ul>
-    </div>
+  <div class="grid-2 mt-8" style="align-items: stretch;">
+    <!-- Entity A (recommended) -->
+    <neo-card interactive header-bg="var(--step-bg-3)">
+      <div slot="header" class="flex items-center justify-between w-full">
+        <span class="neo-card-title">ENTITY A NAME</span>
+        <span class="mono-text" style="border: 2px solid #000; border-radius: 4px; padding: 3px 8px; background: #fff; font-weight: 700;">RECOMMENDED</span>
+      </div>
+
+      <p class="text-body-sm mb-6 italic" style="opacity: 0.8;">
+        One-line positioning statement for Entity A.
+      </p>
+
+      <div class="flex flex-col gap-4 mt-auto">
+        <div class="flex items-start gap-3">
+          <span class="cmp-mark cmp-pro">✓</span>
+          <span class="text-body-sm"><strong>Strength:</strong> First standout advantage of Entity A.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="cmp-mark cmp-pro">✓</span>
+          <span class="text-body-sm"><strong>Strength:</strong> Second standout advantage of Entity A.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="cmp-mark cmp-pro">✓</span>
+          <span class="text-body-sm"><strong>Strength:</strong> Third standout advantage of Entity A.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="cmp-mark cmp-con">✕</span>
+          <span class="text-body-sm"><strong>Trade-off:</strong> Main limitation of Entity A.</span>
+        </div>
+      </div>
+    </neo-card>
+
+    <!-- Entity B -->
+    <neo-card interactive header="ENTITY B NAME" header-bg="var(--step-bg-1)">
+      <p class="text-body-sm mb-6 italic" style="opacity: 0.8;">
+        One-line positioning statement for Entity B.
+      </p>
+
+      <div class="flex flex-col gap-4 mt-auto">
+        <div class="flex items-start gap-3">
+          <span class="cmp-mark cmp-pro">✓</span>
+          <span class="text-body-sm"><strong>Strength:</strong> First standout advantage of Entity B.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="cmp-mark cmp-pro">✓</span>
+          <span class="text-body-sm"><strong>Strength:</strong> Second standout advantage of Entity B.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="cmp-mark cmp-con">✕</span>
+          <span class="text-body-sm"><strong>Trade-off:</strong> First limitation of Entity B.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="cmp-mark cmp-con">✕</span>
+          <span class="text-body-sm"><strong>Trade-off:</strong> Second limitation of Entity B.</span>
+        </div>
+      </div>
+    </neo-card>
   </div>
 </section>
