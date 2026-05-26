@@ -72,24 +72,23 @@ async function loadSlides() {
         document.querySelector('.custom-slide-number').innerText = slideNumberStr;
     };
 
-    // The overlay (header + slide-number) lives outside .slides, so reveal's
-    // scale transform doesn't reach it. Mirror .slides' position and transform
-    // onto the overlay so it scales and aligns with the A4 canvas at any window
-    // size/ratio.
+    // The overlay (header + slide-number) is viewport-fixed so it always stays
+    // at the page edges. We only scale its font-size so text stays proportional
+    // to the slide canvas at any window size.
     const slidesEl = document.querySelector('.slides');
     const overlay = document.querySelector('.canvas-overlay');
-    const syncOverlayTransform = () => {
-        const cs = getComputedStyle(slidesEl);
-        overlay.style.top = cs.top;
-        overlay.style.left = cs.left;
-        overlay.style.transformOrigin = cs.transformOrigin;
-        overlay.style.transform = cs.transform === 'none' ? '' : cs.transform;
+    const syncOverlayScale = () => {
+        const rect = slidesEl.getBoundingClientRect();
+        const scale = rect.width / slidesEl.offsetWidth;
+        if (scale && isFinite(scale)) {
+            overlay.style.fontSize = `${20 * scale}px`;
+        }
     };
 
     Reveal.on('ready', updateSlideNumber);
     Reveal.on('slidechanged', updateSlideNumber);
-    Reveal.on('ready', syncOverlayTransform);
-    Reveal.on('resize', syncOverlayTransform);
+    Reveal.on('ready', syncOverlayScale);
+    Reveal.on('resize', syncOverlayScale);
 
     // Slide 1 (hero) keeps its pre-fixed-canvas look: it fills the whole
     // window edge-to-edge regardless of ratio, so the image always touches the

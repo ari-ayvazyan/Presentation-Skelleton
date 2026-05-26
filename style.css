@@ -34,29 +34,29 @@
   background-color: var(--r-background-color);
 }
 
-/* A4 canvas overlay box. Sized to the fixed slide canvas; main.js copies
-   reveal's .slides top/left/transform-origin/transform onto it so its children
-   (header, slide number) scale and align with the slides at any window ratio. */
+/* Viewport-fixed overlay for header + slide number. Pinned to the viewport
+   edges so the brand name and slide number always sit at the top-left and
+   bottom-left of the page regardless of canvas centering on wide screens.
+   main.js only adjusts font-size scaling so the text stays proportional. */
 .canvas-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 1414px;
-  height: 1000px;
+  width: 100vw;
+  height: 100vh;
   z-index: 1000;
   pointer-events: none;
 }
 
-/* Fixed Header */
+/* Fixed Header – pinned to viewport top-left */
 .fixed-header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
   display: flex;
   align-items: center;
-  padding: 0 80px;
+  padding: 18px 30px;
   background-color: transparent;
   pointer-events: none;
 }
@@ -368,11 +368,11 @@
   gap: 10px;
 }
 
-/* Custom Slide Numbers. Positioned in the bottom-left of the canvas overlay. */
+/* Custom Slide Numbers. Pinned to viewport bottom-left. */
 .custom-slide-number {
   position: absolute;
-  bottom: 30px;
-  left: 80px;
+  bottom: 18px;
+  left: 30px;
   font-family: var(--r-mono-font);
   font-size: 0.9em;
   font-weight: 700;
