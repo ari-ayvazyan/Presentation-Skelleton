@@ -90,6 +90,31 @@ async function loadSlides() {
     Reveal.on('slidechanged', updateSlideNumber);
     Reveal.on('ready', syncOverlayTransform);
     Reveal.on('resize', syncOverlayTransform);
+
+    // Slide 1 (hero) keeps its pre-fixed-canvas look: it fills the whole
+    // window edge-to-edge regardless of ratio, so the image always touches the
+    // top/right/bottom corners. The other slides stay on the letterboxed fixed
+    // canvas. Reveal scales .slides by S and positions the canvas inside the
+    // window; here we counter that for the hero section so it spans the real
+    // viewport: size it in canvas units = viewport / S, and shift its top-left
+    // (in canvas units) to cancel the canvas's on-screen offset.
+    const hero = document.querySelector('.slides > section.hero-slide');
+    const syncHeroFullBleed = () => {
+        if (!hero) return;
+        const rect = slidesEl.getBoundingClientRect();
+        const scale = rect.width / slidesEl.offsetWidth;
+        if (!scale || !isFinite(scale)) return;
+        hero.style.width = `${window.innerWidth / scale}px`;
+        hero.style.height = `${window.innerHeight / scale}px`;
+        // rect.left/top are the canvas origin in viewport px; convert to canvas
+        // units (/scale) and move the section up/left by that much so it lands
+        // at the viewport's (0,0).
+        hero.style.left = `${-rect.left / scale}px`;
+        hero.style.top = `${-rect.top / scale}px`;
+    };
+
+    Reveal.on('ready', syncHeroFullBleed);
+    Reveal.on('resize', syncHeroFullBleed);
 }
 
 loadSlides();
