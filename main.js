@@ -16,7 +16,6 @@ const templateFiles = [
     "slide-templates/module_title.html",
     "slide-templates/feature_overview_grid.html",
     "slide-templates/two_column_cards.html",
-    "slide-templates/vertical_feature_list.html",
     "slide-templates/visual_context.html",
     "slide-templates/comparison_table.html",
     "slide-templates/module_title_with_links.html",
