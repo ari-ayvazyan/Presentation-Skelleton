@@ -1,10 +1,14 @@
 # Project Instructions
 
 ## Skills
+
 - **image-style-novel**: Automatically applies a consistent modern graphic novel style to all image generation tasks. It triggers when using image generation tools.
 
 ## Visual Verification Workflow
+
+After Analysis but **Before** doing any visual change that will affect the UI, use the Playwright MCP server to capture and store a Screenshot of the before state. Put and keep before/after screenshots in the verification folder. The before/after screenshots should be suffixed with -before and -after.
 Whenever you make visual changes to the UI (HTML, CSS, layout, etc.), you **MUST** visually verify your changes using the Playwright MCP server.
+**Compare** the before and after picture and check if your change affected the layout of the application negatively. Consider UI/UX best practices like too small texts, spacing, too crowded screens etc.
 
 1. **Serve the Application**: Ensure the local development server is running (or start it in the background) so the page is accessible via a local URL.
 2. **Navigate and Capture**: Use the Playwright MCP server tools to navigate to the page and take a screenshot.
@@ -14,5 +18,6 @@ Whenever you make visual changes to the UI (HTML, CSS, layout, etc.), you **MUST
 4. **Iterate Until Target is Met**: If the visual output does not accurately match the target expectations, you must iterate on the codebase, capture a new screenshot, and re-verify. Continue this iteration loop autonomously until the visual target is fully met before concluding the task.
 
 ## Styling Rules
+
 - **Category Badge**: The `<div class="category-badge"></div>` element must ALWAYS be empty. Do not add text or content inside it.
 - **Lists**: NEVER use manual bullet point symbols (e.g., "•", "-") inside `<li>` elements. Rely on CSS styling for list markers or use clean `<li>` elements for a minimalist look.
