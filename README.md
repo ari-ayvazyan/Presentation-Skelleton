@@ -53,49 +53,47 @@ npm run presentation
 
 ## Slide Previews
 
-### Slide 1: Hero Slide
-![Hero Slide](assets/slide_1.webp)
+### Slide 1: Hero
+![Hero Slide](assets/slide_01_hero.webp)
 
-### Module 02: Core Features
-#### 2.1: Module Title
-![Module Title](assets/slide_1_0.webp)
+### Slide 2: Module Title
+![Module Title](assets/slide_02_module_title.webp)
 
-#### 2.2: Feature Overview Grid
-![Feature Overview Grid](assets/slide_1_1.webp)
+### Slide 3: Feature Overview Grid
+![Feature Overview Grid](assets/slide_03_feature_overview_grid.webp)
 
-#### 2.3: Two-Column Card Layout
-![Two-Column Card Layout](assets/slide_1_2.webp)
+### Slide 4: Two-Column Cards
+![Two-Column Cards](assets/slide_04_two_column_cards.webp)
 
-#### 2.4: Vertical Feature List
-![Vertical Feature List](assets/slide_1_3.webp)
+### Slide 5: Visual Context
+![Visual Context](assets/slide_05_visual_context.webp)
 
-#### 2.5: Visual Context Layout
-![Visual Context Layout](assets/slide_1_4.webp)
+### Slide 6: Comparison Table
+![Comparison Table](assets/slide_06_comparison_table.webp)
 
-#### 2.6: Comparison Table Layout
-![Comparison Table Layout](assets/slide_1_5.webp)
+### Slide 7: Module Title With Links
+![Module Title With Links](assets/slide_07_module_title_with_links.webp)
 
-### Module 03: Additional Layout Patterns
-#### 3.1: Module Title With Links
-![Module Title With Links](assets/slide_2_0.webp)
+### Slide 8: Five-Item Grid
+![Five-Item Grid](assets/slide_08_five_item_grid.webp)
 
-#### 3.2: Four-Quadrant Overview
-![Four-Quadrant Overview](assets/slide_2_1.webp)
+### Slide 9: Numbered Steps
+![Numbered Steps](assets/slide_09_numbered_steps.webp)
 
-#### 3.3: Five-Item Grid With Wide Row
-![Five-Item Grid With Wide Row](assets/slide_2_2.webp)
+### Slide 10: Four-Column Comparison
+![Four-Column Comparison](assets/slide_10_four_column_comparison.webp)
 
-#### 3.4: Numbered Process Steps
-![Numbered Process Steps](assets/slide_2_4.webp)
+### Slide 11: Hands-On Steps
+![Hands-On Steps](assets/slide_11_hands_on_steps.webp)
 
-#### 3.5: Four-Column Comparison
-![Four-Column Comparison](assets/slide_2_5.webp)
+### Slide 12: Call to Action
+![Call to Action](assets/slide_12_call_to_action.webp)
 
-### Slide 3: Additional Patterns (Extras)
-![Extras Slide](assets/slide_3.webp)
+### Slide 13: Background Image
+![Background Image](assets/slide_13_background_image.webp)
 
-### Slide 4: Conclusion Slide
-![Conclusion Slide](assets/slide_4.webp)
+### Slide 14: Outro
+![Outro Slide](assets/slide_14_outro.webp)
 
 ## License
 
