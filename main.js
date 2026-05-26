@@ -48,19 +48,18 @@ async function loadSlides() {
         }
     }
 
-    // Print/PDF mode needs fixed pixel dimensions so reveal can paginate.
-    // On screen we fill the window so slides reach every edge regardless of window ratio.
-    const isPrint = /print-pdf/gi.test(window.location.search);
-
+    // Fixed A4-landscape canvas (ratio 1:√2). Reveal scales this canvas
+    // uniformly to fit the window: same ratio scales 1:1, a different ratio
+    // is letterboxed so the layout is preserved and always fully visible.
     Reveal.initialize({
         hash: true,
         slideNumber: false,
         center: false,
-        width: isPrint ? 1200 : '100%',
-        height: isPrint ? 800 : '100%',
+        width: 1414,
+        height: 1000,
         margin: 0,
-        minScale: 1,
-        maxScale: 1,
+        minScale: 0.05,
+        maxScale: 5,
         navigationMode: 'default',
         plugins: [RevealHighlight, RevealNotes],
     });
@@ -73,8 +72,24 @@ async function loadSlides() {
         document.querySelector('.custom-slide-number').innerText = slideNumberStr;
     };
 
+    // The overlay (header + slide-number) lives outside .slides, so reveal's
+    // scale transform doesn't reach it. Mirror .slides' position and transform
+    // onto the overlay so it scales and aligns with the A4 canvas at any window
+    // size/ratio.
+    const slidesEl = document.querySelector('.slides');
+    const overlay = document.querySelector('.canvas-overlay');
+    const syncOverlayTransform = () => {
+        const cs = getComputedStyle(slidesEl);
+        overlay.style.top = cs.top;
+        overlay.style.left = cs.left;
+        overlay.style.transformOrigin = cs.transformOrigin;
+        overlay.style.transform = cs.transform === 'none' ? '' : cs.transform;
+    };
+
     Reveal.on('ready', updateSlideNumber);
     Reveal.on('slidechanged', updateSlideNumber);
+    Reveal.on('ready', syncOverlayTransform);
+    Reveal.on('resize', syncOverlayTransform);
 }
 
 loadSlides();

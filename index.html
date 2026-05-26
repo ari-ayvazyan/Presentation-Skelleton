@@ -32,17 +32,22 @@
   </head>
   <body>
     <div class="reveal">
-      <header class="fixed-header">
-        <div class="header-content">
-          <span class="header-brand">BRAND NAME</span>
-          <span class="header-divider">|</span>
-          <span class="header-title">PRESENTATION TITLE</span>
-        </div>
-      </header>
       <div class="slides">
         <!-- Slides will be injected here -->
       </div>
-      <div class="custom-slide-number"></div>
+      <!-- Overlay sits in the A4 canvas coordinate space; main.js mirrors
+           reveal's .slides scale transform onto it so the header and slide
+           number scale and align with the slides at any window size/ratio. -->
+      <div class="canvas-overlay">
+        <header class="fixed-header">
+          <div class="header-content">
+            <span class="header-brand">BRAND NAME</span>
+            <span class="header-divider">|</span>
+            <span class="header-title">PRESENTATION TITLE</span>
+          </div>
+        </header>
+        <div class="custom-slide-number"></div>
+      </div>
     </div>
 
     <script type="module" src="/main.js"></script>
