@@ -3,6 +3,7 @@ import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/white.css';
 import 'reveal.js/plugin/highlight/monokai.css';
 import './style.css';
+import './components.js';
 
 import Reveal from 'reveal.js';
 import RevealHighlight from 'reveal.js/plugin/highlight/highlight.esm.js';
@@ -19,9 +20,7 @@ const templateFiles = [
     "slide-templates/visual_context.html",
     "slide-templates/comparison_table.html",
     "slide-templates/module_title_with_links.html",
-    "slide-templates/four_quadrant.html",
     "slide-templates/five_item_grid.html",
-    "slide-templates/cards_with_lists.html",
     "slide-templates/numbered_steps.html",
     "slide-templates/four_column_comparison.html",
     "slide-templates/hands_on_steps.html",
@@ -50,16 +49,19 @@ async function loadSlides() {
         }
     }
 
-    // Initialize Reveal after content is loaded
+    // Print/PDF mode needs fixed pixel dimensions so reveal can paginate.
+    // On screen we fill the window so slides reach every edge regardless of window ratio.
+    const isPrint = /print-pdf/gi.test(window.location.search);
+
     Reveal.initialize({
         hash: true,
         slideNumber: false,
         center: false,
-        width: 1200,
-        height: 800,
+        width: isPrint ? 1200 : '100%',
+        height: isPrint ? 800 : '100%',
         margin: 0,
-        minScale: 0.2,
-        maxScale: 2.0,
+        minScale: 1,
+        maxScale: 1,
         navigationMode: 'default',
         plugins: [RevealHighlight, RevealNotes],
     });

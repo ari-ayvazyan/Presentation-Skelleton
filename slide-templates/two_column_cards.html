@@ -5,21 +5,17 @@
   <p class="mb-12">Highlight two complementary concepts side-by-side.</p>
 
   <div class="grid-2 mt-8">
-    <div class="neo-card">
-      <div class="neo-card-body">
-        <h4 class="font-extrabold italic mb-4">Card Title One</h4>
-        <p class="text-body-sm mb-0">
-          Short description text for the first card. Use this layout to compare or pair two related items.
-        </p>
-      </div>
-    </div>
-    <div class="neo-card">
-      <div class="neo-card-body">
-        <h4 class="font-extrabold italic mb-4">Card Title Two</h4>
-        <p class="text-body-sm mb-0">
-          Short description text for the second card. Each card stands on its own but shares visual weight with its sibling.
-        </p>
-      </div>
-    </div>
+    <neo-card header="Concept One" header-bg="var(--step-bg-1)">
+      <h4 class="font-extrabold italic mb-4">Card Title One</h4>
+      <p class="text-body-sm mb-0">
+        Short description text for the first card. Use this layout to compare or pair two related items.
+      </p>
+    </neo-card>
+    <neo-card header="Concept Two" header-bg="var(--step-bg-2)">
+      <h4 class="font-extrabold italic mb-4">Card Title Two</h4>
+      <p class="text-body-sm mb-0">
+        Short description text for the second card. Each card stands on its own but shares visual weight with its sibling.
+      </p>
+    </neo-card>
   </div>
 </section>

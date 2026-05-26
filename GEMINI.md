@@ -19,6 +19,8 @@ Whenever you make visual changes to the UI (HTML, CSS, layout, etc.), you **MUST
 5. ** Check if the dev server is already running on the system before starting a new dev server with `npm run dev`
 6. When working through a list of tasks, start by verifying that your method works for the first element, once verified, you may batch the rest.
 7. To create screenshots, use the mcp playwright tool
+8. When inserting images, make sure to verify that they are displayed correctly in different screen resolutions AND in the pdf print.
+9. ALL images that are used in the presentation have to be converted to webp.
 
 ## Styling Rules
 

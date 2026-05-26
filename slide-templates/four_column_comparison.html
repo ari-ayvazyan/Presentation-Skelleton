@@ -5,91 +5,75 @@
 
   <div class="grid mt-8" style="gap: 1.5rem; grid-template-columns: repeat(4, 1fr); align-items: stretch;">
     <!-- Column A -->
-    <div class="neo-card interactive">
-      <div class="neo-card-header" style="background-color: var(--step-bg-1);">
-        <h4 class="font-extrabold italic text-lg text-black mb-0">Starter Edition</h4>
-      </div>
-      <div class="neo-card-body justify-between">
-        <p class="text-body-sm mb-6 opacity-85 leading-relaxed">
-          Ideal for personal or light evaluation use-cases.
-        </p>
-        <div class="flex flex-col gap-4 mt-auto">
-          <div class="flex items-start gap-3">
-            <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-emerald-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
-            <span class="text-body-sm leading-snug"><strong>Pro:</strong> Zero setup required.</span>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-rose-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
-            <span class="text-body-sm leading-snug"><strong>Contra:</strong> Lacks advanced analytics.</span>
-          </div>
+    <neo-card interactive header-bg="var(--step-bg-1)">
+      <div slot="header" class="font-extrabold italic text-lg text-black">Starter Edition</div>
+      <p class="text-body-sm mb-6 opacity-85 leading-relaxed">
+        Ideal for personal or light evaluation use-cases.
+      </p>
+      <div class="flex flex-col gap-4 mt-auto">
+        <div class="flex items-start gap-3">
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-emerald-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+          <span class="text-body-sm leading-snug"><strong>Pro:</strong> Zero setup required.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-rose-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
+          <span class="text-body-sm leading-snug"><strong>Contra:</strong> Lacks advanced analytics.</span>
         </div>
       </div>
-    </div>
+    </neo-card>
 
     <!-- Column B -->
-    <div class="neo-card interactive">
-      <div class="neo-card-header" style="background-color: var(--step-bg-2);">
-        <h4 class="font-extrabold italic text-lg text-black mb-0">Professional</h4>
-      </div>
-      <div class="neo-card-body justify-between">
-        <p class="text-body-sm mb-6 opacity-85 leading-relaxed">
-          Optimized for growing teams and automated setups.
-        </p>
-        <div class="flex flex-col gap-4 mt-auto">
-          <div class="flex items-start gap-3">
-            <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-emerald-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
-            <span class="text-body-sm leading-snug"><strong>Pro:</strong> Fully automated pipelines.</span>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-rose-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
-            <span class="text-body-sm leading-snug"><strong>Contra:</strong> Higher monthly costs.</span>
-          </div>
+    <neo-card interactive header-bg="var(--step-bg-2)">
+      <div slot="header" class="font-extrabold italic text-lg text-black">Professional</div>
+      <p class="text-body-sm mb-6 opacity-85 leading-relaxed">
+        Optimized for growing teams and automated setups.
+      </p>
+      <div class="flex flex-col gap-4 mt-auto">
+        <div class="flex items-start gap-3">
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-emerald-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+          <span class="text-body-sm leading-snug"><strong>Pro:</strong> Fully automated pipelines.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-rose-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
+          <span class="text-body-sm leading-snug"><strong>Contra:</strong> Higher monthly costs.</span>
         </div>
       </div>
-    </div>
+    </neo-card>
 
     <!-- Column C -->
-    <div class="neo-card interactive">
-      <div class="neo-card-header" style="background-color: var(--step-bg-3);">
-        <h4 class="font-extrabold italic text-lg text-black mb-0">Enterprise</h4>
-      </div>
-      <div class="neo-card-body justify-between">
-        <p class="text-body-sm mb-6 opacity-85 leading-relaxed">
-          Custom terms for high-scale organizations.
-        </p>
-        <div class="flex flex-col gap-4 mt-auto">
-          <div class="flex items-start gap-3">
-            <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-emerald-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
-            <span class="text-body-sm leading-snug"><strong>Pro:</strong> Dedicated SLA support.</span>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-rose-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
-            <span class="text-body-sm leading-snug"><strong>Contra:</strong> Long contract terms.</span>
-          </div>
+    <neo-card interactive header-bg="var(--step-bg-3)">
+      <div slot="header" class="font-extrabold italic text-lg text-black">Enterprise</div>
+      <p class="text-body-sm mb-6 opacity-85 leading-relaxed">
+        Custom terms for high-scale organizations.
+      </p>
+      <div class="flex flex-col gap-4 mt-auto">
+        <div class="flex items-start gap-3">
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-emerald-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+          <span class="text-body-sm leading-snug"><strong>Pro:</strong> Dedicated SLA support.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-rose-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
+          <span class="text-body-sm leading-snug"><strong>Contra:</strong> Long contract terms.</span>
         </div>
       </div>
-    </div>
+    </neo-card>
 
     <!-- Column D -->
-    <div class="neo-card interactive">
-      <div class="neo-card-header" style="background-color: var(--step-bg-4);">
-        <h4 class="font-extrabold italic text-lg text-black mb-0">Custom Built</h4>
-      </div>
-      <div class="neo-card-body justify-between">
-        <p class="text-body-sm mb-6 opacity-85 leading-relaxed">
-          Tailor-made solution built on your hardware.
-        </p>
-        <div class="flex flex-col gap-4 mt-auto">
-          <div class="flex items-start gap-3">
-            <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-emerald-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
-            <span class="text-body-sm leading-snug"><strong>Pro:</strong> Zero hosting overhead.</span>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-rose-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
-            <span class="text-body-sm leading-snug"><strong>Contra:</strong> Manual maintenance.</span>
-          </div>
+    <neo-card interactive header-bg="var(--step-bg-4)">
+      <div slot="header" class="font-extrabold italic text-lg text-black">Custom Built</div>
+      <p class="text-body-sm mb-6 opacity-85 leading-relaxed">
+        Tailor-made solution built on your hardware.
+      </p>
+      <div class="flex flex-col gap-4 mt-auto">
+        <div class="flex items-start gap-3">
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-emerald-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+          <span class="text-body-sm leading-snug"><strong>Pro:</strong> Zero hosting overhead.</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="inline-flex items-center justify-center w-5 h-5 rounded border border-black bg-rose-50 text-black text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
+          <span class="text-body-sm leading-snug"><strong>Contra:</strong> Manual maintenance.</span>
         </div>
       </div>
-    </div>
+    </neo-card>
   </div>
 </section>

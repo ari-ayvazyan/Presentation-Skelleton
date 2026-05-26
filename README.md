@@ -85,13 +85,10 @@ npm run presentation
 #### 3.3: Five-Item Grid With Wide Row
 ![Five-Item Grid With Wide Row](assets/slide_2_2.webp)
 
-#### 3.4: Cards With Embedded Lists
-![Cards With Embedded Lists](assets/slide_2_3.webp)
-
-#### 3.5: Numbered Process Steps
+#### 3.4: Numbered Process Steps
 ![Numbered Process Steps](assets/slide_2_4.webp)
 
-#### 3.6: Four-Column Comparison
+#### 3.5: Four-Column Comparison
 ![Four-Column Comparison](assets/slide_2_5.webp)
 
 ### Slide 3: Additional Patterns (Extras)
