@@ -34,10 +34,11 @@ class NeoCard extends HTMLElement {
       if (headerBg) {
         headerNode.style.backgroundColor = headerBg;
       }
-      
-      headerNode.innerHTML = `
-        <span class="font-extrabold text-section-title text-black">${header}</span>
-      `;
+
+      const title = document.createElement('span');
+      title.className = 'neo-card-title';
+      title.textContent = header;
+      headerNode.appendChild(title);
     }
     
     // Save original children into body

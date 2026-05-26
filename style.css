@@ -296,6 +296,13 @@
   align-items: center;
 }
 
+/* Single source of truth for card header title text */
+.neo-card-title {
+  font-weight: 800;
+  font-size: var(--font-size-section-title);
+  color: #000000;
+}
+
 /* Card Body */
 .neo-card-body {
   padding: 20px;
