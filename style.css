@@ -10,6 +10,20 @@
   --r-heading-color: #000000;
   --slide-bg: #F5E6DA; 
   --slide-border: #000000; 
+
+  /* Typographic Scale Variables */
+  --font-size-title: 3.5em;       /* For main titles (h1) */
+  --font-size-slide-title: 2.4em;  /* For slide section titles (h2) */
+  --font-size-section-title: 1.35em; /* For card/item titles (h4) */
+  --font-size-body: 1.1em;         /* For general body text / lists */
+  --font-size-body-sm: 0.95em;     /* For card/grid body text */
+  --font-size-caption: 0.75em;      /* For headers, small links, footnotes */
+
+  /* Progressive sand color shades for step/column headers */
+  --step-bg-1: #EADAD0;
+  --step-bg-2: #DFCFBF;
+  --step-bg-3: #CBBBAA;
+  --step-bg-4: #B7A695;
 }
 
 .reveal {
@@ -147,7 +161,7 @@
 }
 
 .reveal h1 {
-  font-size: 3.5em;
+  font-size: var(--font-size-title);
   font-weight: 800;
   font-style: italic;
   letter-spacing: -0.02em;
@@ -155,17 +169,25 @@
 
 .reveal h2 {
   font-weight: 800;
-  font-size: 2.2em;
+  font-size: var(--font-size-slide-title);
   letter-spacing: -0.01em;
   margin-bottom: 0.8em;
+}
+
+.reveal h4 {
+  font-size: var(--font-size-section-title);
 }
 
 .reveal p {
   line-height: 1.6;
   margin: 0;
   margin-bottom: 1em;
-  font-size: 0.9em;
+  font-size: var(--font-size-body);
   color: #000000;
+}
+
+.reveal ul, .reveal ol {
+  font-size: var(--font-size-body);
 }
 
 /* Monospace text for labels/tags */
@@ -198,13 +220,13 @@
 
 /* Components */
 .black-box {
-  border: 4px solid #000;
+  border: 3px solid #000;
   padding: 20px 24px;
-  background-color: transparent;
-  font-size: 0.65em;
+  background-color: #ffffff;
+  font-size: var(--font-size-body-sm);
   line-height: 1.5;
   color: #000;
-  border-radius: 4px;
+  border-radius: 6px;
   box-shadow: 4px 4px 0px 0px #000;
 }
 
@@ -218,11 +240,11 @@
 
 .comparison-table {
   display: flex;
-  border: 4px solid #000;
+  border: 3px solid #000;
   margin-top: 1.5rem;
-  background-color: transparent;
+  background-color: #ffffff;
   color: #000;
-  border-radius: 4px;
+  border-radius: 6px;
   box-shadow: 4px 4px 0px 0px #000;
   overflow: hidden;
 }
@@ -230,11 +252,51 @@
 .comparison-table > div {
   flex: 1;
   padding: 30px 40px;
-  font-size: 0.75em;
+  font-size: var(--font-size-body-sm);
 }
 
 .comparison-table > div:first-child {
-  border-right: 4px solid #000;
+  border-right: 3px solid #000;
+}
+
+/* Neobrutalism Card Components */
+.neo-card {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px 0px #000000;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Interactive hover-lift card */
+.neo-card.interactive {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.neo-card.interactive:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+
+/* Card Header */
+.neo-card-header {
+  border-bottom: 3px solid #000000;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Card Body */
+.neo-card-body {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .comparison-table h4 {
@@ -260,6 +322,12 @@
 }
 
 /* Utilities */
+.reveal ul.list-none {
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .flex { display: flex; }
 .flex-col { display: flex; flex-direction: column; }
 .gap-2 { gap: 0.5rem; }
@@ -285,6 +353,13 @@
 .font-bold { font-weight: 700; }
 .font-extrabold { font-weight: 800; }
 .italic { font-style: italic; }
+
+.text-title { font-size: var(--font-size-title) !important; }
+.text-slide-title { font-size: var(--font-size-slide-title) !important; }
+.text-section-title { font-size: var(--font-size-section-title) !important; }
+.text-body { font-size: var(--font-size-body) !important; }
+.text-body-sm { font-size: var(--font-size-body-sm) !important; }
+.text-caption { font-size: var(--font-size-caption) !important; }
 
 .placeholder-img {
   background-color: #E2E8F0;

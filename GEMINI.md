@@ -15,7 +15,10 @@ Whenever you make visual changes to the UI (HTML, CSS, layout, etc.), you **MUST
    - **Reveal.js Navigation**: To navigate directly to a specific Reveal.js slide, append the hash fragment `#/h/v` to the URL in `mcp_playwright_playwright_navigate` (e.g., `http://localhost:5173/#/1/2` where `h` is the horizontal index and `v` is the vertical index).
 3. **Analyze and Compare**: Visually analyze the screenshot and compare it against the target design, screenshots, or user instructions. Pay strict attention to spacing, colors, typography, borders, and layout details.
    - **Troubleshooting Layouts**: If a layout appears visually unbalanced, broken, or stacked incorrectly, immediately cross-reference the HTML with the CSS stylesheet (e.g., `style.css`). Verify that all CSS classes used for structure and styling actually exist and are correctly defined.
-4. **Iterate Until Target is Met**: If the visual output does not accurately match the target expectations, you must iterate on the codebase, capture a new screenshot, and re-verify. Continue this iteration loop autonomously until the visual target is fully met before concluding the task.
+4. **Iterate Until Target is Met**: If the visual output does not accurately match the target expectations, you must iterate on the codebase, capture a new screenshot, and re-verify. Fix the issues and continue this loop autonomously until the visual target is fully met and also acceptable from a UX/UI perspective before concluding the task.
+5. ** Check if the dev server is already running on the system before starting a new dev server with `npm run dev`
+6. When working through a list of tasks, start by verifying that your method works for the first element, once verified, you may batch the rest.
+7. To create screenshots, use the mcp playwright tool
 
 ## Styling Rules
 
